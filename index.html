@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh‑CN">
+<head>
+    <meta charset="UTF‑8">
+    <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+    <title>宝鹏装配式体系3.0产品安装手册</title>
+    <style>
+        *{margin:0;padding:0;box‑sizing:border‑box;}
+        body{
+            font‑family:"Microsoft YaHei",Arial,sans‑serif;
+            max‑width:1100px;
+            margin:0 auto;
+            padding:16px;
+            background:#f7f9fa;
+            color:#222;
+            line‑height:1.75;
+        }
+        h1{
+            font‑size:30px;
+            color:#1a3b5d;
+            text‑align:center;
+            margin‑bottom:24px;
+            padding‑bottom:10px;
+            border‑bottom:2px solid #1a3b5d;
+        }
+        h2{
+            font‑size:23px;
+            color:#1a3b5d;
+            margin‑top:32px;
+            margin‑bottom:12px;
+        }
+        h3{
+            font‑size:19px;
+            color:#2c4e70;
+            margin‑top:22px;
+            margin‑bottom:8px;
+        }
+        p{
+            font‑size:16px;
+            margin‑bottom:10px;
+        }
+        .red‑force{
+            color:#d82626;
+            font‑weight:bold;
+        }
+        ul,ol{
+            padding‑left:24px;
+            margin‑bottom:12px;
+        }
+        li{
+            margin‑bottom:6px;
+        }
+        table{
+            width:100%;
+            border‑collapse:collapse;
+            margin:14px 0;
+            background:#fff;
+        }
+        th,td{
+            border:1px solid #bbb;
+            padding:9px;
+            font‑size:15px;
+        }
+        th{
+            background:#e8eff6;
+        }
+        .box{
+            background:#ffffff;
+            padding:24px;
+            border‑radius:8px;
+            box‑shadow:0 1px 5px rgba(0,0,0,0.12);
+            margin‑bottom:20px;
+        }
+        /* 目录 */
+        .catalog{
+            background:#e8eff6;
+            padding:16px 20px;
+            border‑radius:8px;
+            margin‑bottom:26px;
+        }
+        .catalog a{
+            color:#1a3b5d;
+            text‑decoration:none;
+        }
+        .catalog a:hover{
+            color:#d82626;
+            text‑decoration:underline;
+        }
+        /* 图片样式 */
+        .doc‑img{
+            max‑width:85%;
+            height:auto;
+            display:block;
+            margin:1rem 0;
+        }
+        .img‑wrap{
+            display:flex;
+            flex‑wrap:wrap;
+            gap:16px;
+            align‑items:flex‑start;
+            margin:14px 0;
+        }
+        .img‑main{
+            flex:1 1 600px;
+        }
+        .qrcode‑group{
+            display:flex;
+            gap:12px;
+            flex:1 1 220px;
+            justify‑content:center;
+            align‑items:center;
+        }
+        .qrcode‑placeholder{
+            width:110px;
+            height:110px;
+            border:2px dashed #888;
+            border‑radius:6px;
+            display:flex;
+            flex‑direction:column;
+            justify‑content:center;
+            align‑items:center;
+            font‑size:13px;
+            color:#666;
+            text‑align:center;
+        }
+        /* 返回顶部 */
+        #backTop{
+            position:fixed;
+            bottom:30px;
+            right:20px;
+            width:44px;
+            height:44px;
+            background:#1a3b5d;
+            color:#fff;
+            text‑align:center;
+            line‑height:44px;
+            border‑radius:50%;
+            cursor:pointer;
+            display:none;
+            font‑size:13px;
+            box‑shadow:0 2px 8px rgba(0,0,0,0.2);
+        }
+        #backTop:hover{
+            background:#2c4e70;
+        }
+        .notice‑tip{
+            font‑size:14px;
+            color:#555;
+            margin‑top:4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 id="top">宝鹏装配式体系3.0产品安装手册</h1>
+
+        <div class="catalog">
+            <h3>📋目录</h3>
+            <ol>
+                <li><a href="#chap1">一、手册前言</a></li>
+                <li><a href="#chap2">二、分步标准化安装施工流程</a></li>
+                <li><a href="#chap3">三、常见施工问题与快速整改方案</a></li>
+            </ol>
+        </div>
+
+        <h2 id="chap1">一、手册前言</h2>
+        <ol>
+            <li>
+                <p>手册用途：本手册用于宝鹏装配式体系3.0产品现场安装指导，面向现场施工人员，重点说明现场实际操作要求。</p>
+            </li>
+            <li>
+                <p>适用范围：适用于技术交底、基础埋置等前期工作完成并复检合格后的施工阶段，覆盖货物进场、卸货、构件识别、构件安装、竣工验收等全流程工序。</p>
+            </li>
+            <li>
+                <p>重要提示：手册中<span class="red‑force">红色标注内容为强制施工要求，必须严格执行。</span>本手册仅用于现场安装指导，不包含CAD图纸及设计内容。</p>
+            </li>
+        </ol>
+
+
+        <h2 id="chap2">二、分步标准化安装施工流程</h2>
+
+        <h3>2.1 第一步：前期准备及打包发货</h3>
+        <p><strong>● 技术交底及施工注意事项</strong></p>
+        <p>施工前组织现场作业人员进行技术交底，明确构件编号、安装顺序、施工操作要求、质量偏差要求及安全注意事项。</p>
+        <p>作业人员充分理解施工流程及注意事项后，方可进行现场安装。</p>
+
+        <p><strong>● 现场施工条件检查</strong></p>
+        <p>施工前复核现场基础及作业条件：</p>
+        <ol>
+            <li>确认作业区域满足施工要求；</li>
+            <li>确认吊装作业空间及通道满足要求；</li>
+            <li>现场施工人员提前规划材料堆放区域；</li>
+            <li>确保施工用电及相关设备状态正常；</li>
+            <li>确保测量、吊装、紧固等施工工具齐全且状态完好。</li>
+        </ol>
+
+        <p><strong>● 工厂打包及发货原则</strong></p>
+        <p><strong>① 钢结构打包</strong></p>
+        <ol>
+            <li>
+                <p>打包顺序：<br>一层柱 → 一层梁 → 二层柱 → 二层梁 → 屋面梁/屋架 → 支撑、系杆、檩条</p>
+            </li>
+            <li>钢梁打包：同一楼层钢梁按长度分类打包，每捆重量≤2 t。</li>
+            <li>楼层标识：各楼层钢梁两端采用不同颜色喷漆进行区分：1F：红色　2F：蓝色　3F：黄色</li>
+            <li>编号标识：发货前每捆钢构挂牌，明确标注构件编号及包号。</li>
+            <li>连接件及散件：连接板、加劲板、支座等散件清点数量后，以木托盘集中打包，使用缠绕膜固定，并挂牌标明托盘内构件编号。</li>
+            <li>檩条打包：按楼层分类打包；数量较多时可分批打包，每捆高度≤60 cm。</li>
+            <li>螺栓及配套材料：螺栓、垫片、螺母成套装入木箱，与对应构件同车发货。</li>
+        </ol>
+
+        <p><strong>② AAC板材及配套材料打包</strong></p>
+        <ol>
+            <li>打包顺序：一体大板、切割板均按照现场安装流程及顺序进行叠层打包。</li>
+            <li>
+                <p>包装尺寸及重量：</p>
+                <ul>
+                    <li>切割板：每托高度一般≤0.75 m</li>
+                    <li>一体大板：每托高度一般≤1.30 m</li>
+                    <li>每托板材重量：≤3 t</li>
+                </ul>
+            </li>
+            <li>打包原则：原则上每托板材对应同一楼层；如有特殊情况，在唛头上明确标识。一体大板采用铁托包装，并设置楼层标识，如：1F、2F、3F……</li>
+        </ol>
+
+        <p><strong>③ 装车原则（40OT集装箱）：按安装顺序装车，重件在下、轻件在上。</strong></p>
+        <ol>
+            <li>车厢底部先装底层钢柱等重型构件；</li>
+            <li>钢柱装完后，根据空间依次装入各楼层框架梁；</li>
+            <li>支撑、拉条、连接板、檩条等放在上层，底部垫方木；</li>
+            <li>AAC板材及其他配套材料根据现场安装顺序及装车空间合理安排。</li>
+        </ol>
+
+
+        <h3>2.2 第二步：货物进场与卸货堆放作业(建议准备一台5t吊车)</h3>
+        <ol>
+            <li>进场查验：物料完整性、标签完整性、外观破损检查</li>
+            <li>标准化卸货操作：吊装/人工卸货规范、受力点位、轻拿轻放要求</li>
+            <li>及时分类堆放：按楼层、构件类型、安装先后顺序分区摆放</li>
+        </ol>
+
+        <p><strong>卸货及堆放要求：</strong></p>
+        <p><strong>● 钢构卸货及堆放要求</strong></p>
+        <ol>
+            <li>卸货前规划：根据施工顺序、装车顺序及现场堆放区域提前规划卸货位置，确保卸货后便于分类和取用。</li>
+            <li>按顺序分类堆放:按楼层、构件类型、编号及包号分类卸货、堆放；先安装、先使用的构件优先放置在便于取用的位置。</li>
+            <li>核对标识及堆放条件:卸货时核对楼层标识、构件编号及包号；构件应放置在平整、稳定、通道畅通的区域，并做好垫置。</li>
+            <li>安全堆放:避免构件倾倒、变形、碰撞及锈蚀，不得影响后续吊装和现场施工</li>
+            <li><span class="red‑force">强制要求:钢结构必须按施工顺序及装车顺序分类堆放，严禁不同楼层、不同编号构件混放，不得堵塞施工通道。</span></li>
+        </ol>
+
+        <p><strong>● AAC板材卸货及堆放要求</strong></p>
+        <ol>
+            <li>卸货前规划:根据现场施工顺序、打包顺序及堆放区域提前规划卸货位置，便于后续识别和取用。</li>
+            <li>按顺序分类堆放:按楼层、板材类型及安装顺序进行卸货和分类，先安装、先使用的板材优先放置在便于取用的位置。</li>
+            <li>平整铺放:厂家已根据板材承载能力、受力点及现场安装顺序进行叠层打包。开箱卸货后，现场不得整托再次叠放或上下堆压，应平整铺放。</li>
+            <li>安全保护:堆放过程中避免板材受力不均、倾倒、碰撞及损坏，并保持堆放区域稳定、通道畅通。</li>
+            <li><span class="red‑force">强制要求:AAC板材卸货后必须平整铺放，严禁整托叠放、上下堆压或随意堆放，避免板材损坏。</span></li>
+        </ol>
+
+
+        <h3>2.3 第三步：构件识别</h3>
+        <p><strong> 钢构构件识别</strong></p>
+        <img src="01.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
+
+        <p><strong>AAC板材构件识别</strong></p>
+        <img src="02.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
+
+
+        <h3>2.4 第四步：安装流程确认</h3>
+        <p>现场安装按照“先钢结构、后墙板及楼板；先下层、后上层；逐层向上”的顺序进行。</p>
+        <p><strong>标准安装顺序：</strong></p>
+        <p>钢柱 → 底层钢梁 → 二层钢梁 → 屋面钢梁 → 一层墙板/楼板 → 二层墙板/楼板 → 屋面板</p>
+        <p>施工过程中，应按照上述顺序组织构件吊装及安装，不得随意改变安装顺序。每一道工序完成并确认符合要求后，再进行下一道工序。</p>
+        <img src="03.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
+
+
+        <h3>2.5 第五步：钢柱安装施工</h3>
+        <!-- 图片+两个二维码占位 -->
+        <div class="img-wrap" style="display:flex;align-items:flex-start;gap:2rem;max-width:85%;margin:1rem auto;">
+            <div class="img-main" style="flex:0 0 75%;">
+                <img src="04.jpg" alt="钢构构件编号识别方法" style="max-width:100%;height:auto;display:block;margin:1rem 0;">
+            </div>
+            <div class="qrcode-group" style="flex:0 0 15%;display:flex;flex-direction:column;gap:1.5rem;">>
+                <div class="qrcode-placeholder">
+                    二维码占位1
+                    <div class="notice‑tip">钢柱操作视频1</div>
+                </div>
+                <div class="qrcode‑placeholder">
+                    二维码占位2
+                    <div class="notice‑tip">钢柱操作视频2</div>
+                </div>
+            </div>
+        </div>
+
+        <p><strong>① 安装操作</strong></p>
+        <ol>
+            <li>安装准备：工具校验、钢柱及安装点位清理。</li>
+            <li>吊装就位：钢柱对位、吊装就位，并进行临时固定。</li>
+            <li>调平校正：调整钢柱位置，校正垂直度、水平度。</li>
+            <li>永久固定：完成永久固定及螺栓紧固。</li>
+            <li>复核调整：复核安装点位及整体安装状态，及时调整偏差。</li>
+        </ol>
+
+        <p><strong>② 验收与强制要求</strong></p>
+        <ol>
+            <li>检查钢柱垂直度、水平度及安装位置是否符合要求。</li>
+            <li>检查柱脚及连接螺栓是否紧固、无松动、无漏拧。</li>
+            <li>检查钢柱是否存在歪斜、变形或碰伤。</li>
+            <li><span class="red‑force">钢柱安装必须横平竖直，严格控制垂直度及安装偏差，严禁歪装、斜装、松动安装。（强制要求）</span></li>
+        </ol>
+
+        <p><strong>③ 成品保护</strong></p>
+        <p>防碰撞、防变形、防锈、防污染。严禁随意拆卸、碰撞、堆压或改动。</p>
+
+
+        <h3>2.6 第六步：钢梁安装</h3>
+        <div class="img‑wrap">
+            <div class="img‑main">
+                <img src="05.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
+            </div>
+            <div class="qrcode‑group">
+                <div class="qrcode‑placeholder">
+                    二维码占位1
+                    <div class="notice‑tip">钢梁操作视频</div>
+                </div>
+                <div class="qrcode‑placeholder">
+                    二维码占位2
+                    <div class="notice‑tip">钢梁要点视频</div>
+                </div>
+            </div>
+        </div>
+
+        <p><strong>① 安装操作</strong></p>
+        <ol>
+            <li>构件复核：核对钢梁型号、长度及对接点位，确认构件与安装位置一致。</li>
+            <li>吊装就位：按施工顺序进行钢梁吊装，与钢柱连接位置准确对接、拼装。</li>
+            <li>对位调平：调整钢梁安装位置，完成接缝调平、对位校准，并进行临时固定。</li>
+            <li>连接紧固：完成连接件安装及螺栓紧固，确保钢梁连接可靠。</li>
+            <li>整体稳定检查：检查钢梁连接状态及整体钢结构稳定性，发现问题及时调整。</li>
+        </ol>
+
+        <p><strong>② 验收及强制要求</strong></p>
+        <ol>
+            <li>检查钢梁水平度、平整度、安装位置及连接状态是否符合要求。</li>
+            <li>检查连接件及螺栓是否安装齐全、紧固可靠，无松动、漏拧。</li>
+            <li>对钢结构整体进行复核，检查整体安装是否存在偏差，并及时进行修正。</li>
+            <li><span class="red‑force">钢梁安装必须保证水平、平整、连接可靠；整体钢结构体系必须保持横平竖直，严格控制安装偏差。严禁未校正、未固定或存在明显偏差的情况下进入下一道工序。（强制要求）</span></li>
+        </ol>
+
+        <p><strong>③ 成品保护</strong></p>
+        <p>钢梁及钢结构安装完成后，应做好防碰撞、防变形、防锈、防污染保护。</p>
+        <p>严禁随意拆卸、碰撞、堆压或改动已安装构件及连接件。</p>
+
+
+        <h3>2.7 第七步：AAC板材安装施工</h3>
+        <div class="img‑wrap">
+            <div class="img‑main">
+                <img src="06.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
+            </div>
+            <div class="qrcode‑group">
+                <div class="qrcode‑placeholder">
+                    二维码占位1
+                    <div class="notice‑tip">AAC板操作视频</div>
+                </div>
+                <div class="qrcode‑placeholder">
+                    二维码占位2
+                    <div class="notice‑tip">AAC板要点视频</div>
+                </div>
+            </div>
+        </div>
+
+        <p><strong>① 安装操作</strong></p>
+        <ol>
+            <li>安装前检查：复核钢构基面的平整度、清洁度及安装条件，确保满足板材安装要求。</li>
+            <li>板材复核：检查AAC板材外观、尺寸及完整性，发现破损、变形等情况及时处理。</li>
+            <li>排版对位：按照安装顺序进行板材排版、定位和对位，确认安装位置准确。</li>
+            <li>就位固定：板材平稳就位，完成安装及固定，确保板材安装牢固。</li>
+            <li>板缝及收口处理：按施工要求进行板缝处理、边部收口及密封辅材施工，确保连接及收口完整。</li>
+        </ol>
+
+        <p><strong>② 验收及强制要求</strong></p>
+        <ol>
+            <li>检查AAC板安装位置、平整度、垂直度及牢固度是否符合要求。</li>
+            <li>检查板缝、收口及密封处理是否完整、可靠。</li>
+            <li>检查板材是否存在松动、错位、破损等问题，发现问题及时修正。</li>
+            <li><span class="red‑force">AAC板安装过程中，严禁暴力安装、强行挤压或违规叠放施工。板材应平稳就位，严禁使用不当方式强行调整或安装。（强制要求）</span></li>
+        </ol>
+
+        <p><strong>③ 成品保护</strong></p>
+        <p>AAC板安装完成后，应做好防碰撞、防刮蹭、防破损、防挤压、防潮保护。</p>
+        <p>严禁随意拆卸、碰撞、堆压或改动已安装板材及连接部位。</p>
+
+
+        <h3>2.8 第八步：竣工验收</h3>
+        <p><strong> 验收前提条件</strong></p>
+        <ol>
+            <li>钢结构、AAC 板材全部安装施工完成；</li>
+            <li>完成现场自检，所有安装偏差已整改到位；</li>
+            <li>施工现场清理完毕，成品保护措施落实到位；</li>
+            <li>构件标签、安装记录完整齐全。</li>
+        </ol>
+
+        <p><strong> 主要验收标准</strong></p>
+        <p>1. 钢结构验收</p>
+        <ul>
+            <li>① 钢柱垂直度符合规范要求，无歪斜；钢梁水平度达标，整体框架横平竖直。</li>
+            <li>② 所有螺栓紧固到位，无漏拧、虚拧，柱脚、对接节点连接牢固。</li>
+            <li>③ 构件无磕碰变形、锈蚀损伤，构件安装位置与施工要求保持一致。</li>
+        </ul>
+
+        <p>2. AAC 板材验收</p>
+        <ul>
+            <li>① AAC 墙板、楼板就位准确，板材无破损、开裂、缺角。</li>
+            <li>② 板缝间隙均匀，收口、密封胶施工完整，密封连续无断缝、无气泡。</li>
+            <li>③ 板材固定点齐全，固定牢固，无松动晃动现象。</li>
+        </ul>
+
+        <p><strong> 验收结果判定规则</strong></p>
+        <ol>
+            <li>所有检查项均满足验收标准 → 验收合格，可移交下一工序。</li>
+            <li>如有偏差、缺陷：标记问题位置，整改完成后重新检查；复检合格才算验收通过。</li>
+            <li>验收做好记录，留存验收检查资料。</li>
+        </ol>
+
+
+        <h2 id="chap3">三、常见施工问题与快速整改方案</h2>
+        <ol>
+            <li>钢柱偏差 → 检查、调整、复测</li>
+            <li>钢梁水平/标高偏差 → 调整、复测</li>
+            <li>AAC板安装错位 → 检查排版、调整</li>
+            <li>板缝过大/不均匀 → 重新调整、处理</li>
+            <li>固定不牢 → 检查固定点并重新固定</li>
+            <li>构件编号错误/找料错误 → 停止安装、重新核对</li>
+            <li>构件或板材破损 → 隔离、标识、按要求处理</li>
+        </ol>
+    </div>
+
+    <div id="backTop">顶部</div>
+    <script>
+        const backTopBtn = document.getElementById('backTop');
+        window.addEventListener('scroll',function(){
+            if(window.scrollY>300){
+                backTopBtn.style.display='block';
+            }else{
+                backTopBtn.style.display='none';
+            }
+        })
+        backTopBtn.addEventListener('click',function(){
+            window.scrollTo({top:0,behavior:'smooth'});
+        })
+    </script>
+</body>
+</html>
+<!-- （注：内容由AI生成） -->

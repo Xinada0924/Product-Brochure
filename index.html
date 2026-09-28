@@ -1,454 +1,602 @@
 <!DOCTYPE html>
-<html lang="zh‑CN">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF‑8">
-    <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-    <title>宝鹏装配式体系3.0产品安装手册</title>
-    <style>
-        *{margin:0;padding:0;box‑sizing:border‑box;}
-        body{
-            font‑family:"Microsoft YaHei",Arial,sans‑serif;
-            max‑width:1100px;
-            margin:0 auto;
-            padding:16px;
-            background:#f7f9fa;
-            color:#222;
-            line‑height:1.75;
-        }
-        h1{
-            font‑size:30px;
-            color:#1a3b5d;
-            text‑align:center;
-            margin‑bottom:24px;
-            padding‑bottom:10px;
-            border‑bottom:2px solid #1a3b5d;
-        }
-        h2{
-            font‑size:23px;
-            color:#1a3b5d;
-            margin‑top:32px;
-            margin‑bottom:12px;
-        }
-        h3{
-            font‑size:19px;
-            color:#2c4e70;
-            margin‑top:22px;
-            margin‑bottom:8px;
-        }
-        p{
-            font‑size:16px;
-            margin‑bottom:10px;
-        }
-        .red‑force{
-            color:#d82626;
-            font‑weight:bold;
-        }
-        ul,ol{
-            padding‑left:24px;
-            margin‑bottom:12px;
-        }
-        li{
-            margin‑bottom:6px;
-        }
-        table{
-            width:100%;
-            border‑collapse:collapse;
-            margin:14px 0;
-            background:#fff;
-        }
-        th,td{
-            border:1px solid #bbb;
-            padding:9px;
-            font‑size:15px;
-        }
-        th{
-            background:#e8eff6;
-        }
-        .box{
-            background:#ffffff;
-            padding:24px;
-            border‑radius:8px;
-            box‑shadow:0 1px 5px rgba(0,0,0,0.12);
-            margin‑bottom:20px;
-        }
-        /* 目录 */
-        .catalog{
-            background:#e8eff6;
-            padding:16px 20px;
-            border‑radius:8px;
-            margin‑bottom:26px;
-        }
-        .catalog a{
-            color:#1a3b5d;
-            text‑decoration:none;
-        }
-        .catalog a:hover{
-            color:#d82626;
-            text‑decoration:underline;
-        }
-        /* 图片样式 */
-        .doc‑img{
-            max‑width:85%;
-            height:auto;
-            display:block;
-            margin:1rem 0;
-        }
-        .img‑wrap{
-            display:flex;
-            flex‑wrap:wrap;
-            gap:16px;
-            align‑items:flex‑start;
-            margin:14px 0;
-        }
-        .img‑main{
-            flex:1 1 600px;
-        }
-        .qrcode‑group{
-            display:flex;
-            gap:12px;
-            flex:1 1 220px;
-            justify‑content:center;
-            align‑items:center;
-        }
-        .qrcode‑placeholder{
-            width:110px;
-            height:110px;
-            border:2px dashed #888;
-            border‑radius:6px;
-            display:flex;
-            flex‑direction:column;
-            justify‑content:center;
-            align‑items:center;
-            font‑size:13px;
-            color:#666;
-            text‑align:center;
-        }
-        /* 返回顶部 */
-        #backTop{
-            position:fixed;
-            bottom:30px;
-            right:20px;
-            width:44px;
-            height:44px;
-            background:#1a3b5d;
-            color:#fff;
-            text‑align:center;
-            line‑height:44px;
-            border‑radius:50%;
-            cursor:pointer;
-            display:none;
-            font‑size:13px;
-            box‑shadow:0 2px 8px rgba(0,0,0,0.2);
-        }
-        #backTop:hover{
-            background:#2c4e70;
-        }
-        .notice‑tip{
-            font‑size:14px;
-            color:#555;
-            margin‑top:4px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>宝鹏装配式体系3.0产品安装手册</title>
+<style>
+
+/* =====================================================================
+   宝鹏装配式体系 3.0 产品安装手册 —— 样式参数集中配置区
+   修改下方 :root 中的变量即可统一调整「三级标题 / 正文 / 图片 / 目录」
+   的字号、行距、字色与间距，无需改动 HTML 结构。
+   ===================================================================== */
+:root{
+  /* ---------- 全局 ---------- */
+  --page-max-width: 720px;          /* 正文区最大宽度（手机端自适应） */
+  --page-padding-x: 18px;           /* 左右安全边距 */
+  --page-padding-y: 26px;           /* 上下留白 */
+  --base-font-size: 16.5px;         /* 基准字号（影响全部元素） */
+  --font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+                 Helvetica, Arial, sans-serif;
+  --text-color: #2b2b2b;            /* 正文默认字色 */
+  --bg-color: #f4f6f8;              /* 页面背景色 */
+  --card-bg: #ffffff;               /* 内容卡片背景色 */
+  --theme-color: #1f6fb2;           /* 主题色（标题装饰条、序号） */
+
+  /* ---------- 一级标题（文档主标题） ---------- */
+  --h1-font-size: 25px;
+  --h1-line-height: 1.5;
+  --h1-font-weight: 700;
+  --h1-color: #16304d;
+  --h1-margin-top: 0px;
+  --h1-margin-bottom: 10px;
+  --h1-letter-spacing: 0.5px;
+
+  /* ---------- 二级标题（一、二、三 章节） ---------- */
+  --h2-font-size: 21px;
+  --h2-line-height: 1.6;
+  --h2-font-weight: 700;
+  --h2-color: #16304d;
+  --h2-margin-top: 42px;
+  --h2-margin-bottom: 18px;
+  --h2-letter-spacing: 0.5px;
+  --h2-bar-width: 5px;              /* 左侧装饰条宽度 */
+  --h2-padding-left: 12px;
+
+  /* ---------- 三级标题（2.1 / 2.2 … 各步骤） ---------- */
+  --h3-font-size: 18.5px;
+  --h3-line-height: 1.7;
+  --h3-font-weight: 700;
+  --h3-color: #1a1a1a;
+  --h3-margin-top: 34px;            /* 与上方内容的间距 */
+  --h3-margin-bottom: 14px;         /* 与下方正文的间距 */
+  --h3-letter-spacing: 0.4px;
+  --h3-padding-left: 12px;
+  --h3-bar-width: 4px;              /* 左侧装饰条宽度 */
+  --h3-bar-color: var(--theme-color);
+  --h3-bg: #eef4fa;                 /* 标题底色（设为 transparent 可关闭） */
+  --h3-padding-y: 8px;
+  --h3-radius: 6px;
+
+  /* ---------- 四级标题（● / ① 小标题） ---------- */
+  --h4-font-size: 16.5px;
+  --h4-line-height: 1.7;
+  --h4-font-weight: 700;
+  --h4-color: #22405e;
+  --h4-margin-top: 22px;
+  --h4-margin-bottom: 10px;
+  --h4-letter-spacing: 0.3px;
+
+  /* ---------- 正文段落 ---------- */
+  --p-font-size: 16.5px;
+  --p-line-height: 1.95;            /* 正文行距（阅读舒适度主参数） */
+  --p-color: var(--text-color);
+  --p-margin-top: 0px;
+  --p-margin-bottom: 14px;          /* 段与段之间的距离 */
+  --p-letter-spacing: 0.3px;
+  --p-text-indent: 0em;             /* 首行缩进（改为 2em 可开启） */
+
+  /* ---------- 列表 ---------- */
+  --list-font-size: 16.5px;
+  --list-line-height: 1.9;
+  --list-item-margin-bottom: 11px;  /* 列表项之间的距离 */
+  --list-padding-left: 1.6em;
+  --list-margin-top: 4px;
+  --list-margin-bottom: 16px;
+  --list-marker-color: var(--theme-color);
+  --list-marker-weight: 600;
+
+  /* ---------- 图片 ---------- */
+  --img-width: 100%;                /* 图片相对容器宽度 */
+  --img-max-width: 100%;            /* 图片最大宽度 */
+  --img-margin-top: 16px;           /* 图片上方间距 */
+  --img-margin-bottom: 20px;        /* 图片下方间距 */
+  --img-radius: 8px;                /* 圆角 */
+  --img-border: 1px solid #e3e8ee;  /* 边框（none 可关闭） */
+  --img-shadow: 0 2px 10px rgba(20,40,70,.07);
+  --img-bg: #ffffff;
+  --caption-font-size: 13px;        /* 图注字号 */
+  --caption-color: #8b95a3;
+  --caption-margin-top: 8px;
+
+  /* ---------- 目录 ---------- */
+  --toc-radius: 12px;               /* 目录卡片圆角 */
+  --toc-max-height: 66vh;           /* 目录展开后的最大高度（超出滚动） */
+  --toc-title-size: 16px;           /* “目录”标题字号 */
+  --toc-font-size: 15.5px;          /* 二级标题条目字号 */
+  --toc-sub-size: 15px;             /* 三级标题条目字号 */
+  --toc-line-height: 1.75;          /* 目录条目行距 */
+  --toc-item-padding-y: 7px;        /* 目录条目上下内边距 */
+  --toc-indent-3: 15px;             /* 三级标题条目的缩进量 */
+  --toc-item-color: #41505f;        /* 条目默认字色 */
+  --toc-active-bg: #eef4fa;         /* 当前章节高亮底色 */
+  --toc-active-color: var(--theme-color);
+  --toc-margin-bottom: 22px;
+
+  /* ---------- 返回顶部按钮 ---------- */
+  --totop-size: 46px;               /* 按钮直径 */
+  --totop-right: 16px;              /* 距屏幕右侧 */
+  --totop-bottom: 26px;             /* 距屏幕底部 */
+  --totop-color: var(--theme-color);
+  --totop-bg: rgba(255,255,255,.95);
+
+  /* ---------- 锚点定位 ---------- */
+  --anchor-offset: 14px;            /* 跳转后标题距顶部的留白 */
+
+  /* ---------- 强调色（与文档标注保持一致） ---------- */
+  --warn-color: #E36C09;            /* 强制要求 / 重点提示 */
+  --red-color: #C00000;
+  --blue-color: #2E6DB4;
+  --yellow-color: #D9A400;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0; padding:0;
+  background:var(--bg-color);
+  font-family:var(--font-family);
+  font-size:var(--base-font-size);
+  color:var(--text-color);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:var(--page-max-width);
+  margin:0 auto;
+  padding:var(--page-padding-y) var(--page-padding-x) 60px;
+}
+/* 目录跳转时给标题留出顶部间距 */
+h2,h3,h4{scroll-margin-top:var(--anchor-offset);}
+
+/* ---------- 文档头 ---------- */
+.doc-head{
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:22px 20px 18px;
+  margin-bottom:var(--toc-margin-bottom);
+  box-shadow:0 2px 12px rgba(20,40,70,.06);
+  border-top:4px solid var(--theme-color);
+}
+h1{
+  font-size:var(--h1-font-size);
+  line-height:var(--h1-line-height);
+  font-weight:var(--h1-font-weight);
+  color:var(--h1-color);
+  margin:var(--h1-margin-top) 0 var(--h1-margin-bottom);
+  letter-spacing:var(--h1-letter-spacing);
+  text-align:center;
+}
+.doc-sub{
+  text-align:center;color:#8b95a3;font-size:13px;margin:0;
+}
+
+/* ---------- 目录（原生 details，无需 JS 即可展开/收起） ---------- */
+.toc{
+  background:var(--card-bg);
+  border-radius:var(--toc-radius);
+  margin-bottom:var(--toc-margin-bottom);
+  border:1px solid #e3e8ee;
+  box-shadow:0 2px 10px rgba(20,40,70,.05);
+  overflow:hidden;
+}
+.toc-toggle{
+  display:block;                     /* 兼容性关键：不在 summary 上用 flex */
+  width:100%;padding:0;margin:0;
+  background:none;border:0;cursor:pointer;
+  font-family:inherit;font-size:var(--toc-title-size);font-weight:700;
+  color:#16304d;text-align:left;
+  list-style:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.toc-toggle::-webkit-details-marker{display:none;}
+.toc-toggle::marker{content:"";}
+.toc-toggle-inner{
+  display:flex;align-items:center;gap:9px;
+  padding:14px 16px;
+}
+.toc-toggle .toc-ico{font-size:15px;color:var(--theme-color);}
+.toc-toggle .toc-count{color:#9aa4b2;font-weight:400;font-size:13px;}
+.toc-toggle .toc-arrow{
+  margin-left:auto;color:#9aa4b2;font-size:12px;
+  transition:transform .22s ease;
+}
+.toc[open] .toc-toggle .toc-arrow{transform:rotate(180deg);}
+.toc-body{
+  padding:0 10px 10px;
+  max-height:var(--toc-max-height);
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  border-top:1px solid #eef1f5;
+}
+.toc-body a{
+  display:block;
+  text-decoration:none;
+  font-size:var(--toc-font-size);
+  line-height:var(--toc-line-height);
+  padding:var(--toc-item-padding-y) 10px;
+  border-radius:6px;
+  color:var(--toc-item-color);
+  -webkit-tap-highlight-color:transparent;
+}
+.toc-body a.toc-lv3{
+  font-size:var(--toc-sub-size);
+  padding-left:calc(10px + var(--toc-indent-3));
+  color:#5a6673;
+}
+.toc-body a.on{
+  background:var(--toc-active-bg);
+  color:var(--toc-active-color);
+  font-weight:600;
+}
+.toc-body a:active{background:#e4edf7;}
+
+/* ---------- 二、三级标题 ---------- */
+h2{
+  font-size:var(--h2-font-size);
+  line-height:var(--h2-line-height);
+  font-weight:var(--h2-font-weight);
+  color:var(--h2-color);
+  margin:var(--h2-margin-top) 0 var(--h2-margin-bottom);
+  letter-spacing:var(--h2-letter-spacing);
+  padding-left:var(--h2-padding-left);
+  border-left:var(--h2-bar-width) solid var(--theme-color);
+}
+h3{
+  font-size:var(--h3-font-size);
+  line-height:var(--h3-line-height);
+  font-weight:var(--h3-font-weight);
+  color:var(--h3-color);
+  margin:var(--h3-margin-top) 0 var(--h3-margin-bottom);
+  letter-spacing:var(--h3-letter-spacing);
+  padding:var(--h3-padding-y) var(--h3-padding-left);
+  background:var(--h3-bg);
+  border-left:var(--h3-bar-width) solid var(--h3-bar-color);
+  border-radius:var(--h3-radius);
+}
+h4{
+  font-size:var(--h4-font-size);
+  line-height:var(--h4-line-height);
+  font-weight:var(--h4-font-weight);
+  color:var(--h4-color);
+  margin:var(--h4-margin-top) 0 var(--h4-margin-bottom);
+  letter-spacing:var(--h4-letter-spacing);
+}
+h4.num{margin-top:20px;}
+
+/* ---------- 正文 ---------- */
+p{
+  font-size:var(--p-font-size);
+  line-height:var(--p-line-height);
+  color:var(--p-color);
+  margin:var(--p-margin-top) 0 var(--p-margin-bottom);
+  letter-spacing:var(--p-letter-spacing);
+  text-indent:var(--p-text-indent);
+  word-break:break-word;
+}
+p:last-child{margin-bottom:0;}
+.lead{font-weight:600;}
+.flow{
+  font-weight:600;color:#16304d;padding:10px 14px;margin-bottom:10px;
+  background:#f7f9fc;border-left:3px solid var(--theme-color);border-radius:0 6px 6px 0;
+}
+
+/* ---------- 列表 ---------- */
+ol,ul{
+  font-size:var(--list-font-size);
+  line-height:var(--list-line-height);
+  margin:var(--list-margin-top) 0 var(--list-margin-bottom);
+  padding-left:var(--list-padding-left);
+}
+ol.sub{padding-left:1.5em;margin-top:8px;}
+li{margin-bottom:var(--list-item-margin-bottom);padding-left:2px;}
+li:last-child{margin-bottom:0;}
+li::marker{color:var(--list-marker-color);font-weight:var(--list-marker-weight);}
+ul>li{list-style:none;position:relative;padding-left:1.15em;}
+ul>li::before{
+  content:"\2022";position:absolute;left:0;top:0;
+  color:var(--list-marker-color);font-weight:700;
+}
+
+/* ---------- 图片 ---------- */
+figure.pic{
+  margin:var(--img-margin-top) 0 var(--img-margin-bottom);
+  padding:0;text-align:center;
+}
+figure.pic img{
+  display:block;
+  width:var(--img-width);
+  max-width:var(--img-max-width);
+  height:auto;
+  margin:0 auto;
+  border-radius:var(--img-radius);
+  border:var(--img-border);
+  box-shadow:var(--img-shadow);
+  background:var(--img-bg);
+  cursor:zoom-in;
+}
+figure.pic figcaption{
+  font-size:var(--caption-font-size);
+  color:var(--caption-color);
+  margin-top:var(--caption-margin-top);
+}
+
+/* ---------- 常见问题区 ---------- */
+.qa{
+  background:var(--card-bg);border-radius:10px;padding:16px 18px;
+  border:1px solid #e6ebf1;
+}
+.qa-item{margin-bottom:10px;}
+.qa-item:last-child{margin-bottom:0;}
+
+/* ---------- 返回顶部按钮（无 JS 时常显可点，有 JS 时滚动后出现） ---------- */
+#toTop{
+  position:fixed;
+  right:var(--totop-right);bottom:var(--totop-bottom);
+  width:var(--totop-size);height:var(--totop-size);
+  border-radius:50%;
+  border:1px solid #dde4ec;
+  background:var(--totop-bg);
+  color:var(--totop-color);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 12px rgba(20,40,70,.16);
+  cursor:pointer;padding:0;
+  opacity:1;visibility:visible;transform:none;
+  transition:opacity .22s ease, transform .22s ease, visibility .22s;
+  z-index:60;-webkit-tap-highlight-color:transparent;
+  text-decoration:none;
+}
+#toTop.show{opacity:1;visibility:visible;transform:none;}
+#toTop.hide{opacity:0;visibility:hidden;transform:translateY(10px);}
+#toTop:active{background:#eef4fa;}
+
+/* ---------- 图片点击放大 ---------- */
+#zoom{
+  position:fixed;inset:0;z-index:99;display:none;
+  background:rgba(12,18,26,.94);
+  overflow:auto;-webkit-overflow-scrolling:touch;
+  padding:0;
+}
+#zoom.on{display:flex;align-items:center;justify-content:center;}
+#zoom img{max-width:none;width:auto;height:auto;max-height:none;display:block;margin:auto;}
+#zoom .hint{
+  position:fixed;left:0;right:0;bottom:16px;text-align:center;
+  color:rgba(255,255,255,.75);font-size:13px;pointer-events:none;
+}
+footer.tip{text-align:center;color:#9aa4b2;font-size:12.5px;margin-top:34px;}
+
+/* ---------- 窄屏微调 ---------- */
+@media (max-width:400px){
+  :root{
+    --base-font-size:16px;
+    --h1-font-size:22px;
+    --h2-font-size:19.5px;
+    --h3-font-size:17.5px;
+    --p-font-size:16px;
+    --page-padding-x:14px;
+    --toc-font-size:15px;
+    --toc-sub-size:14.5px;
+    --totop-size:42px;
+  }
+}
+/* ---------- 降低动效偏好 ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  #toTop,.toc-toggle .toc-arrow{transition:none;}
+}
+
+</style>
 </head>
 <body>
-    <div class="box">
-        <h1 id="top">宝鹏装配式体系3.0产品安装手册</h1>
+<span id="top"></span>
+<div class="wrap">
+  <div class="doc-head">
+    <h1>宝鹏装配式体系3.0产品安装手册</h1>
+    <p class="doc-sub">现场安装指导手册 · 手机阅读版</p>
+  </div>
 
-        <div class="catalog">
-            <h3>📋目录</h3>
-            <ol>
-                <li><a href="#chap1">一、手册前言</a></li>
-                <li><a href="#chap2">二、分步标准化安装施工流程</a></li>
-                <li><a href="#chap3">三、常见施工问题与快速整改方案</a></li>
-            </ol>
-        </div>
-
-        <h2 id="chap1">一、手册前言</h2>
-        <ol>
-            <li>
-                <p>手册用途：本手册用于宝鹏装配式体系3.0产品现场安装指导，面向现场施工人员，重点说明现场实际操作要求。</p>
-            </li>
-            <li>
-                <p>适用范围：适用于技术交底、基础埋置等前期工作完成并复检合格后的施工阶段，覆盖货物进场、卸货、构件识别、构件安装、竣工验收等全流程工序。</p>
-            </li>
-            <li>
-                <p>重要提示：手册中<span class="red‑force">红色标注内容为强制施工要求，必须严格执行。</span>本手册仅用于现场安装指导，不包含CAD图纸及设计内容。</p>
-            </li>
-        </ol>
-
-
-        <h2 id="chap2">二、分步标准化安装施工流程</h2>
-
-        <h3>2.1 第一步：前期准备及打包发货</h3>
-        <p><strong>● 技术交底及施工注意事项</strong></p>
-        <p>施工前组织现场作业人员进行技术交底，明确构件编号、安装顺序、施工操作要求、质量偏差要求及安全注意事项。</p>
-        <p>作业人员充分理解施工流程及注意事项后，方可进行现场安装。</p>
-
-        <p><strong>● 现场施工条件检查</strong></p>
-        <p>施工前复核现场基础及作业条件：</p>
-        <ol>
-            <li>确认作业区域满足施工要求；</li>
-            <li>确认吊装作业空间及通道满足要求；</li>
-            <li>现场施工人员提前规划材料堆放区域；</li>
-            <li>确保施工用电及相关设备状态正常；</li>
-            <li>确保测量、吊装、紧固等施工工具齐全且状态完好。</li>
-        </ol>
-
-        <p><strong>● 工厂打包及发货原则</strong></p>
-        <p><strong>① 钢结构打包</strong></p>
-        <ol>
-            <li>
-                <p>打包顺序：<br>一层柱 → 一层梁 → 二层柱 → 二层梁 → 屋面梁/屋架 → 支撑、系杆、檩条</p>
-            </li>
-            <li>钢梁打包：同一楼层钢梁按长度分类打包，每捆重量≤2 t。</li>
-            <li>楼层标识：各楼层钢梁两端采用不同颜色喷漆进行区分：1F：红色　2F：蓝色　3F：黄色</li>
-            <li>编号标识：发货前每捆钢构挂牌，明确标注构件编号及包号。</li>
-            <li>连接件及散件：连接板、加劲板、支座等散件清点数量后，以木托盘集中打包，使用缠绕膜固定，并挂牌标明托盘内构件编号。</li>
-            <li>檩条打包：按楼层分类打包；数量较多时可分批打包，每捆高度≤60 cm。</li>
-            <li>螺栓及配套材料：螺栓、垫片、螺母成套装入木箱，与对应构件同车发货。</li>
-        </ol>
-
-        <p><strong>② AAC板材及配套材料打包</strong></p>
-        <ol>
-            <li>打包顺序：一体大板、切割板均按照现场安装流程及顺序进行叠层打包。</li>
-            <li>
-                <p>包装尺寸及重量：</p>
-                <ul>
-                    <li>切割板：每托高度一般≤0.75 m</li>
-                    <li>一体大板：每托高度一般≤1.30 m</li>
-                    <li>每托板材重量：≤3 t</li>
-                </ul>
-            </li>
-            <li>打包原则：原则上每托板材对应同一楼层；如有特殊情况，在唛头上明确标识。一体大板采用铁托包装，并设置楼层标识，如：1F、2F、3F……</li>
-        </ol>
-
-        <p><strong>③ 装车原则（40OT集装箱）：按安装顺序装车，重件在下、轻件在上。</strong></p>
-        <ol>
-            <li>车厢底部先装底层钢柱等重型构件；</li>
-            <li>钢柱装完后，根据空间依次装入各楼层框架梁；</li>
-            <li>支撑、拉条、连接板、檩条等放在上层，底部垫方木；</li>
-            <li>AAC板材及其他配套材料根据现场安装顺序及装车空间合理安排。</li>
-        </ol>
-
-
-        <h3>2.2 第二步：货物进场与卸货堆放作业(建议准备一台5t吊车)</h3>
-        <ol>
-            <li>进场查验：物料完整性、标签完整性、外观破损检查</li>
-            <li>标准化卸货操作：吊装/人工卸货规范、受力点位、轻拿轻放要求</li>
-            <li>及时分类堆放：按楼层、构件类型、安装先后顺序分区摆放</li>
-        </ol>
-
-        <p><strong>卸货及堆放要求：</strong></p>
-        <p><strong>● 钢构卸货及堆放要求</strong></p>
-        <ol>
-            <li>卸货前规划：根据施工顺序、装车顺序及现场堆放区域提前规划卸货位置，确保卸货后便于分类和取用。</li>
-            <li>按顺序分类堆放:按楼层、构件类型、编号及包号分类卸货、堆放；先安装、先使用的构件优先放置在便于取用的位置。</li>
-            <li>核对标识及堆放条件:卸货时核对楼层标识、构件编号及包号；构件应放置在平整、稳定、通道畅通的区域，并做好垫置。</li>
-            <li>安全堆放:避免构件倾倒、变形、碰撞及锈蚀，不得影响后续吊装和现场施工</li>
-            <li><span class="red‑force">强制要求:钢结构必须按施工顺序及装车顺序分类堆放，严禁不同楼层、不同编号构件混放，不得堵塞施工通道。</span></li>
-        </ol>
-
-        <p><strong>● AAC板材卸货及堆放要求</strong></p>
-        <ol>
-            <li>卸货前规划:根据现场施工顺序、打包顺序及堆放区域提前规划卸货位置，便于后续识别和取用。</li>
-            <li>按顺序分类堆放:按楼层、板材类型及安装顺序进行卸货和分类，先安装、先使用的板材优先放置在便于取用的位置。</li>
-            <li>平整铺放:厂家已根据板材承载能力、受力点及现场安装顺序进行叠层打包。开箱卸货后，现场不得整托再次叠放或上下堆压，应平整铺放。</li>
-            <li>安全保护:堆放过程中避免板材受力不均、倾倒、碰撞及损坏，并保持堆放区域稳定、通道畅通。</li>
-            <li><span class="red‑force">强制要求:AAC板材卸货后必须平整铺放，严禁整托叠放、上下堆压或随意堆放，避免板材损坏。</span></li>
-        </ol>
-
-
-        <h3>2.3 第三步：构件识别</h3>
-        <p><strong> 钢构构件识别</strong></p>
-        <img src="01.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
-
-        <p><strong>AAC板材构件识别</strong></p>
-        <img src="02.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
-
-
-        <h3>2.4 第四步：安装流程确认</h3>
-        <p>现场安装按照“先钢结构、后墙板及楼板；先下层、后上层；逐层向上”的顺序进行。</p>
-        <p><strong>标准安装顺序：</strong></p>
-        <p>钢柱 → 底层钢梁 → 二层钢梁 → 屋面钢梁 → 一层墙板/楼板 → 二层墙板/楼板 → 屋面板</p>
-        <p>施工过程中，应按照上述顺序组织构件吊装及安装，不得随意改变安装顺序。每一道工序完成并确认符合要求后，再进行下一道工序。</p>
-        <img src="03.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
-
-
-        <h3>2.5 第五步：钢柱安装施工</h3>
-        <!-- 图片+两个二维码占位 -->
-        <div class="img-wrap" style="display:flex;align-items:flex-start;gap:2rem;max-width:85%;margin:1rem auto;">
-            <div class="img-main" style="flex:0 0 75%;">
-                <img src="04.jpg" alt="钢构构件编号识别方法" style="max-width:100%;height:auto;display:block;margin:1rem 0;">
-            </div>
-            <div class="qrcode-group" style="flex:0 0 15%;display:flex;flex-direction:column;gap:1.5rem;">>
-                <div class="qrcode-placeholder">
-                    二维码占位1
-                    <div class="notice‑tip">钢柱操作视频1</div>
-                </div>
-                <div class="qrcode‑placeholder">
-                    二维码占位2
-                    <div class="notice‑tip">钢柱操作视频2</div>
-                </div>
-            </div>
-        </div>
-
-        <p><strong>① 安装操作</strong></p>
-        <ol>
-            <li>安装准备：工具校验、钢柱及安装点位清理。</li>
-            <li>吊装就位：钢柱对位、吊装就位，并进行临时固定。</li>
-            <li>调平校正：调整钢柱位置，校正垂直度、水平度。</li>
-            <li>永久固定：完成永久固定及螺栓紧固。</li>
-            <li>复核调整：复核安装点位及整体安装状态，及时调整偏差。</li>
-        </ol>
-
-        <p><strong>② 验收与强制要求</strong></p>
-        <ol>
-            <li>检查钢柱垂直度、水平度及安装位置是否符合要求。</li>
-            <li>检查柱脚及连接螺栓是否紧固、无松动、无漏拧。</li>
-            <li>检查钢柱是否存在歪斜、变形或碰伤。</li>
-            <li><span class="red‑force">钢柱安装必须横平竖直，严格控制垂直度及安装偏差，严禁歪装、斜装、松动安装。（强制要求）</span></li>
-        </ol>
-
-        <p><strong>③ 成品保护</strong></p>
-        <p>防碰撞、防变形、防锈、防污染。严禁随意拆卸、碰撞、堆压或改动。</p>
-
-
-        <h3>2.6 第六步：钢梁安装</h3>
-        <div class="img‑wrap">
-            <div class="img‑main">
-                <img src="05.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
-            </div>
-            <div class="qrcode‑group">
-                <div class="qrcode‑placeholder">
-                    二维码占位1
-                    <div class="notice‑tip">钢梁操作视频</div>
-                </div>
-                <div class="qrcode‑placeholder">
-                    二维码占位2
-                    <div class="notice‑tip">钢梁要点视频</div>
-                </div>
-            </div>
-        </div>
-
-        <p><strong>① 安装操作</strong></p>
-        <ol>
-            <li>构件复核：核对钢梁型号、长度及对接点位，确认构件与安装位置一致。</li>
-            <li>吊装就位：按施工顺序进行钢梁吊装，与钢柱连接位置准确对接、拼装。</li>
-            <li>对位调平：调整钢梁安装位置，完成接缝调平、对位校准，并进行临时固定。</li>
-            <li>连接紧固：完成连接件安装及螺栓紧固，确保钢梁连接可靠。</li>
-            <li>整体稳定检查：检查钢梁连接状态及整体钢结构稳定性，发现问题及时调整。</li>
-        </ol>
-
-        <p><strong>② 验收及强制要求</strong></p>
-        <ol>
-            <li>检查钢梁水平度、平整度、安装位置及连接状态是否符合要求。</li>
-            <li>检查连接件及螺栓是否安装齐全、紧固可靠，无松动、漏拧。</li>
-            <li>对钢结构整体进行复核，检查整体安装是否存在偏差，并及时进行修正。</li>
-            <li><span class="red‑force">钢梁安装必须保证水平、平整、连接可靠；整体钢结构体系必须保持横平竖直，严格控制安装偏差。严禁未校正、未固定或存在明显偏差的情况下进入下一道工序。（强制要求）</span></li>
-        </ol>
-
-        <p><strong>③ 成品保护</strong></p>
-        <p>钢梁及钢结构安装完成后，应做好防碰撞、防变形、防锈、防污染保护。</p>
-        <p>严禁随意拆卸、碰撞、堆压或改动已安装构件及连接件。</p>
-
-
-        <h3>2.7 第七步：AAC板材安装施工</h3>
-        <div class="img‑wrap">
-            <div class="img‑main">
-                <img src="06.jpg" alt="钢构构件编号识别方法" style="max-width:85%;height:auto;display:block;margin:1rem 0;">
-            </div>
-            <div class="qrcode‑group">
-                <div class="qrcode‑placeholder">
-                    二维码占位1
-                    <div class="notice‑tip">AAC板操作视频</div>
-                </div>
-                <div class="qrcode‑placeholder">
-                    二维码占位2
-                    <div class="notice‑tip">AAC板要点视频</div>
-                </div>
-            </div>
-        </div>
-
-        <p><strong>① 安装操作</strong></p>
-        <ol>
-            <li>安装前检查：复核钢构基面的平整度、清洁度及安装条件，确保满足板材安装要求。</li>
-            <li>板材复核：检查AAC板材外观、尺寸及完整性，发现破损、变形等情况及时处理。</li>
-            <li>排版对位：按照安装顺序进行板材排版、定位和对位，确认安装位置准确。</li>
-            <li>就位固定：板材平稳就位，完成安装及固定，确保板材安装牢固。</li>
-            <li>板缝及收口处理：按施工要求进行板缝处理、边部收口及密封辅材施工，确保连接及收口完整。</li>
-        </ol>
-
-        <p><strong>② 验收及强制要求</strong></p>
-        <ol>
-            <li>检查AAC板安装位置、平整度、垂直度及牢固度是否符合要求。</li>
-            <li>检查板缝、收口及密封处理是否完整、可靠。</li>
-            <li>检查板材是否存在松动、错位、破损等问题，发现问题及时修正。</li>
-            <li><span class="red‑force">AAC板安装过程中，严禁暴力安装、强行挤压或违规叠放施工。板材应平稳就位，严禁使用不当方式强行调整或安装。（强制要求）</span></li>
-        </ol>
-
-        <p><strong>③ 成品保护</strong></p>
-        <p>AAC板安装完成后，应做好防碰撞、防刮蹭、防破损、防挤压、防潮保护。</p>
-        <p>严禁随意拆卸、碰撞、堆压或改动已安装板材及连接部位。</p>
-
-
-        <h3>2.8 第八步：竣工验收</h3>
-        <p><strong> 验收前提条件</strong></p>
-        <ol>
-            <li>钢结构、AAC 板材全部安装施工完成；</li>
-            <li>完成现场自检，所有安装偏差已整改到位；</li>
-            <li>施工现场清理完毕，成品保护措施落实到位；</li>
-            <li>构件标签、安装记录完整齐全。</li>
-        </ol>
-
-        <p><strong> 主要验收标准</strong></p>
-        <p>1. 钢结构验收</p>
-        <ul>
-            <li>① 钢柱垂直度符合规范要求，无歪斜；钢梁水平度达标，整体框架横平竖直。</li>
-            <li>② 所有螺栓紧固到位，无漏拧、虚拧，柱脚、对接节点连接牢固。</li>
-            <li>③ 构件无磕碰变形、锈蚀损伤，构件安装位置与施工要求保持一致。</li>
-        </ul>
-
-        <p>2. AAC 板材验收</p>
-        <ul>
-            <li>① AAC 墙板、楼板就位准确，板材无破损、开裂、缺角。</li>
-            <li>② 板缝间隙均匀，收口、密封胶施工完整，密封连续无断缝、无气泡。</li>
-            <li>③ 板材固定点齐全，固定牢固，无松动晃动现象。</li>
-        </ul>
-
-        <p><strong> 验收结果判定规则</strong></p>
-        <ol>
-            <li>所有检查项均满足验收标准 → 验收合格，可移交下一工序。</li>
-            <li>如有偏差、缺陷：标记问题位置，整改完成后重新检查；复检合格才算验收通过。</li>
-            <li>验收做好记录，留存验收检查资料。</li>
-        </ol>
-
-
-        <h2 id="chap3">三、常见施工问题与快速整改方案</h2>
-        <ol>
-            <li>钢柱偏差 → 检查、调整、复测</li>
-            <li>钢梁水平/标高偏差 → 调整、复测</li>
-            <li>AAC板安装错位 → 检查排版、调整</li>
-            <li>板缝过大/不均匀 → 重新调整、处理</li>
-            <li>固定不牢 → 检查固定点并重新固定</li>
-            <li>构件编号错误/找料错误 → 停止安装、重新核对</li>
-            <li>构件或板材破损 → 隔离、标识、按要求处理</li>
-        </ol>
+  <details class="toc" id="toc">
+    <summary class="toc-toggle">
+      <div class="toc-toggle-inner">
+        <span class="toc-ico">☰</span>
+        <span>目录</span>
+        <span class="toc-count">共 14 节</span>
+        <span class="toc-arrow">▼</span>
+      </div>
+    </summary>
+    <div class="toc-body" id="tocBody">
+      <a class="toc-lv2" href="#sec-1">一、手册前言</a>
+      <a class="toc-lv3" href="#sec-2">1.1 手册用途</a>
+      <a class="toc-lv3" href="#sec-3">1.2 适用范围</a>
+      <a class="toc-lv3" href="#sec-4">1.3 重要提示</a>
+      <a class="toc-lv2" href="#sec-5">二、分步标准化安装施工流程</a>
+      <a class="toc-lv3" href="#sec-6">2.1 第一步：前期准备及打包发货</a>
+      <a class="toc-lv3" href="#sec-7">2.2 第二步：货物进场与卸货堆放作业(建议准备一台至少5t吊车)</a>
+      <a class="toc-lv3" href="#sec-8">2.3 第三步：构件识别</a>
+      <a class="toc-lv3" href="#sec-9">2.4 第四步：安装流程确认</a>
+      <a class="toc-lv3" href="#sec-10">2.5 第五步：钢柱安装施工（动画一）</a>
+      <a class="toc-lv3" href="#sec-11">2.6 第六步：钢梁安装（动画二）</a>
+      <a class="toc-lv3" href="#sec-12">2.7 第七步：AAC板材安装施工（动画三）</a>
+      <a class="toc-lv3" href="#sec-13">2.8 第八步：竣工验收</a>
+      <a class="toc-lv2" href="#sec-14">三、常见施工问题与快速整改方案</a>
     </div>
+  </details>
 
-    <div id="backTop">顶部</div>
-    <script>
-        const backTopBtn = document.getElementById('backTop');
-        window.addEventListener('scroll',function(){
-            if(window.scrollY>300){
-                backTopBtn.style.display='block';
-            }else{
-                backTopBtn.style.display='none';
-            }
-        })
-        backTopBtn.addEventListener('click',function(){
-            window.scrollTo({top:0,behavior:'smooth'});
-        })
-    </script>
+<h2 id="sec-1">一、手册前言</h2>
+<h3 id="sec-2">1.1 手册用途</h3>
+<p>本手册用于宝鹏装配式体系3.0产品现场安装指导，面向现场施工人员，重点说明现场实际操作要求。</p>
+<h3 id="sec-3">1.2 适用范围</h3>
+<p>适用于技术交底、基础埋置等前期工作完成并复检合格后的施工阶段，覆盖货物进场、卸货、构件识别、构件安装、竣工验收等全流程工序。</p>
+<h3 id="sec-4">1.3 重要提示</h3>
+<p>手册中红色标注内容为强制施工要求，必须严格执行。本手册仅用于现场安装指导，不包含CAD图纸及设计内容。</p>
+<h2 id="sec-5">二、分步标准化安装施工流程</h2>
+<h3 id="sec-6">2.1 第一步：前期准备及打包发货</h3>
+<h4>2.1.1 技术交底及施工注意事项</h4>
+<p>施工前组织现场作业人员进行技术交底，明确构件编号、安装顺序、施工操作要求、质量偏差要求及安全注意事项。作业人员充分理解施工流程及注意事项后，方可进行现场安装。</p>
+<h4>2.1.2 现场施工条件检查</h4>
+<p>施工前复核现场基础及作业条件：</p>
+<ol start="1"><li>确认作业区域满足施工要求；</li><li>确认吊装作业空间及通道满足要求；</li><li>现场施工人员提前规划材料堆放区域；</li><li>确保施工用电及相关设备状态正常；</li><li>确保测量、吊装、紧固等施工工具齐全且状态完好。</li><li><strong style="color:#E36C09">检查柱脚底板，确认安装位置与标高符合图纸要求</strong></li></ol>
+<h4>2.1.3 工厂打包及发货原则</h4>
+<h4>● 钢结构打包</h4>
+<ol start="1"><li>打包顺序：<br>钢柱 → 一层梁 → 二层梁 → 屋面梁/屋架 → 支撑、系杆、檩条</li><li>钢梁打包：同一楼层钢梁按长度分类打包，每捆重量≤2 t。</li><li>楼层标识：各楼层钢梁两端采用不同颜色喷漆进行区分：1F：<span style="color:#C00000">红色</span>　2F：<span style="color:#2E6DB4">蓝色</span>　3F：<span style="color:#D9A400">黄色</span></li><li>编号标识：发货前每捆钢构挂牌，明确标注构件编号及包号。</li><li>连接件及散件：连接板、加劲板、支座等散件清点数量后，以木托盘集中打包，使用缠绕膜固定，并挂牌标明托盘内构件编号。</li><li>檩条打包：按楼层分类打包；数量较多时可分批打包，每捆高度≤60 cm。</li><li>螺栓及配套材料：螺栓、垫片、螺母成套装入木箱，与对应构件同车发货。</li></ol>
+<h4>● AAC板材及配套材料打包</h4>
+<ol start="1"><li>打包顺序：一体大板、切割板均按照现场安装流程及顺序进行叠层打包。</li><li>包装尺寸及重量 ：</li></ol>
+<ol class="sub"><li>切割板：每托高度一般≤0.75 m</li><li>一体大板：每托高度一般≤1.30 m</li><li>每托板材重量：≤3 t</li></ol>
+<ol start="3"><li>打包原则：原则上每托板材对应同一楼层；如有特殊情况，在唛头上明确标识。一体大板采用铁托包装，并设置楼层标识，如：1F、2F、3F……</li></ol>
+<h4>● 装车原则（40OT集装箱）：按安装顺序装车，重件在下、轻件在上。</h4>
+<ol start="1"><li>车厢底部先装底层钢柱等重型构件；</li><li>钢柱装完后，根据空间依次装入各楼层框架梁；</li><li>支撑、拉条、连接板、檩条等放在上层，底部垫方木；</li><li>AAC板材及其他配套材料根据现场安装顺序及装车空间合理安排。</li></ol>
+<h3 id="sec-7">2.2 第二步：货物进场与卸货堆放作业(建议准备一台至少5t吊车)</h3>
+<h4>2.2.1 进场查验</h4>
+<p>物料完整性、标签完整性、外观破损检查<strong>（如有问题，及时与厂家联系）</strong></p>
+<h4>2.2.2 标准化卸货操作</h4>
+<p>吊装/人工卸货规范、受力点位、轻拿轻放要求</p>
+<h4>2.2.3 及时分类堆放</h4>
+<p>按楼层、构件类型、安装先后顺序分区摆放</p>
+<h4>2.2.4 卸货及堆放要求</h4>
+<h4>● 钢构卸货及堆放要求</h4>
+<ol start="1"><li>卸货前规划：根据施工顺序、装车顺序及现场堆放区域提前规划卸货位置，确保卸货后便于分类和取用。</li><li>按顺序分类堆放:按楼层、构件类型、编号及包号分类卸货、堆放；先安装、先使用的构件优先放置在便于取用的位置。</li><li>核对标识及堆放条件:卸货时核对楼层标识、构件编号及包号；构件应放置在平整、稳定、通道畅通的区域，并做好垫置。</li><li>安全堆放:避免构件倾倒、变形、碰撞及锈蚀，不得影响后续吊装和现场施工</li><li><span style="color:#E36C09">强制要求:钢结构必须按施工顺序及装车顺序分类堆放，严禁不同楼层、不同编号构件混放，不得堵塞施工通道。</span></li></ol>
+<h4>● AAC板材卸货及堆放要求</h4>
+<ol start="1"><li>卸货前规划:根据现场施工顺序、打包顺序及堆放区域提前规划卸货位置，便于后续识别和取用。</li><li>按顺序分类堆放:按楼层、板材类型及安装顺序进行卸货和分类，先安装、先使用的板材优先放置在便于取用的位置。</li><li>平整铺放:厂家已根据板材承载能力、受力点及现场安装顺序进行叠层打包。开箱卸货后，现场不得整托再次叠放或上下堆压，应平整铺放。</li><li>安全保护:堆放过程中避免板材受力不均、倾倒、碰撞及损坏，并保持堆放区域稳定、通道畅通。</li><li><span style="color:#E36C09">强制要求:AAC板材卸货后必须平整铺放，严禁整托叠放、上下堆压或随意堆放，避免板材损坏</span><span style="color:#244061">。</span></li></ol>
+<h3 id="sec-8">2.3 第三步：构件识别</h3>
+<h4>2.3.1 钢构构件识别</h4>
+<figure class="pic"><img src="01.jpg" alt="示意图 01" width="1472" height="1040" loading="lazy" data-zoom><figcaption>图 1</figcaption></figure>
+<h4>2.3.2 AAC板材构件识别</h4>
+<figure class="pic"><img src="02.jpg" alt="示意图 02" width="1472" height="1040" loading="lazy" data-zoom><figcaption>图 2</figcaption></figure>
+<h3 id="sec-9">2.4 第四步：安装流程确认</h3>
+<p>现场安装按照“先钢结构、后楼板及墙板；先下层、后上层；逐层向上”的顺序进行。<strong>最终顺序与现场施工人员协商后确定。</strong></p>
+<p class="lead"><strong>标准安装顺序：</strong></p>
+<p class="flow"><strong>钢柱 → 底层钢梁 → 二层钢梁 → 底层楼板/墙板 → 二层楼板 → 屋面钢梁 →二层墙板→屋面板</strong></p>
+<p>施工过程中，应按照上述顺序组织构件吊装及安装，如有特殊情况及时与技术人员联系。每一道工序完成并确认符合要求后，再进行下一道工序。</p>
+<h3 id="sec-10">2.5 第五步：钢柱安装施工（动画一）</h3>
+<figure class="pic"><img src="03.jpg" alt="示意图 03" width="1267" height="845" loading="lazy" data-zoom><figcaption>图 3</figcaption></figure>
+<h4>2.5.1 安装操作</h4>
+<ol start="1"><li>安装准备：工具校验、钢柱及安装点位清理、再次确认柱脚底板位置与标高符合图纸要求。</li><li>吊装就位：钢柱对位、吊装就位，并进行临时固定。</li><li>调平校正：调整钢柱位置，校正垂直度、水平度。</li><li>永久固定：完成永久固定及螺栓紧固。</li><li>复核调整：复核安装点位及整体安装状态，及时调整偏差。</li></ol>
+<h4>2.5.2 验收与强制要求</h4>
+<ol start="1"><li>检查钢柱垂直度、水平度及安装位置是否符合要求。</li><li>检查柱脚及连接螺栓是否紧固、无松动、无漏拧。</li><li>检查钢柱是否存在歪斜、变形或碰伤。</li><li><strong style="color:#E36C09">钢柱安装必须横平竖直，严格控制垂直度及安装偏差，严禁歪装、斜装、松动安装。（强制要求）</strong></li></ol>
+<h4>2.5.3 成品保护</h4>
+<p>防碰撞、防变形、防锈、防污染。严禁随意拆卸、碰撞、堆压或改动。</p>
+<h3 id="sec-11">2.6 第六步：钢梁安装（动画二）</h3>
+<figure class="pic"><img src="04.jpg" alt="示意图 04" width="1267" height="845" loading="lazy" data-zoom><figcaption>图 4</figcaption></figure>
+<h4>2.6.1 安装操作</h4>
+<ol start="1"><li>构件复核：核对钢梁型号、长度及对接点位，确认构件与安装位置一致。</li><li>吊装就位：按施工顺序进行钢梁吊装，与钢柱连接位置准确对接、拼装。</li><li>对位调平：调整钢梁安装位置，完成接缝调平、对位校准，并进行临时固定。</li><li>连接紧固：完成连接件安装及螺栓紧固，确保钢梁连接可靠。</li><li>整体稳定检查：检查钢梁连接状态及整体钢结构稳定性，发现问题及时调整。</li></ol>
+<h4>2.6.2 验收及强制要求</h4>
+<ol start="1"><li>检查钢梁水平度、平整度、安装位置及连接状态是否符合要求。</li><li>检查连接件及螺栓是否安装齐全、紧固可靠，无松动、漏拧。</li><li>对钢结构整体进行复核，检查整体安装是否存在偏差，并及时进行修正。</li><li><strong style="color:#E36C09">钢梁安装必须保证水平、平整、连接可靠；整体钢结构体系必须保持横平竖直，严格控制安装偏差。严禁未校正、未固定或存在明显偏差的情况下进入下一道工序。（强制要求）</strong></li></ol>
+<h4>2.6.3 成品保护</h4>
+<p>钢梁及钢结构安装完成后，应做好防碰撞、防变形、防锈、防污染保护。严禁随意拆卸、碰撞、堆压或改动已安装构件及连接件。</p>
+<h3 id="sec-12">2.7 第七步：AAC板材安装施工（动画三）</h3>
+<figure class="pic"><img src="05.jpg" alt="示意图 05" width="1267" height="845" loading="lazy" data-zoom><figcaption>图 5</figcaption></figure>
+<h4>2.7.1 安装操作</h4>
+<ol start="1"><li>安装前检查：复核钢构基面的平整度、清洁度及安装条件，确保满足板材安装要求。</li><li>板材复核：检查AAC板材外观、尺寸及完整性，发现破损、变形等情况及时处理。</li><li>排版对位：按照安装顺序进行板材排版、定位和对位，确认安装位置准确。</li><li>就位固定：板材平稳就位，钩头螺栓焊接固定，确保板材连接牢固。</li><li>板缝及收口处理：按施工要求进行板缝处理、边部收口及密封辅材施工，确保连接及收口完整。</li></ol>
+<h4>2.7.2 验收及强制要求</h4>
+<ol start="1"><li>检查AAC板安装位置、平整度、垂直度及牢固度是否符合要求。</li><li>检查板缝、收口及密封处理是否完整、可靠。</li><li>检查板材是否存在松动、错位、破损等问题，发现问题及时修正。</li><li><strong style="color:#E36C09">AAC板材安装过程中，严禁暴力安装、强行挤压或违规叠放施工。板材应平稳就位，严禁使用不当方式强行调整或安装。（强制要求）</strong></li><li><strong style="color:#E36C09">吊装AAC板材过程中，吊装区域严禁站人。</strong></li></ol>
+<h4>2.7.3 成品保护</h4>
+<p>AAC板安装完成后，应做好防碰撞、防刮蹭、防破损、防挤压、防潮保护。严禁随意拆卸、碰撞、堆压或改动已安装板材及连接部位。</p>
+<h3 id="sec-13">2.8 第八步：竣工验收</h3>
+<h4 class="num">2.8.1 验收前提条件</h4>
+<ol start="1"><li>钢结构、AAC 板材全部安装施工完成；</li><li>完成现场自检，所有安装偏差已整改到位；</li><li>施工现场清理完毕，成品保护措施落实到位；</li><li>构件标签、安装记录完整齐全。</li></ol>
+<h4 class="num">2.8.2 主要验收标准</h4>
+<ol start="1"><li>钢结构验收 ① 钢柱垂直度符合规范要求，无歪斜；钢梁水平度达标，整体框架横平竖直。 ② 所有螺栓紧固到位，无漏拧、虚拧，柱脚、对接节点连接牢固。 ③ 构件无磕碰变形、锈蚀损伤，构件安装位置与施工要求保持一致。</li><li>AAC 板材验收 ① AAC 墙板、楼板就位准确，板材无破损、开裂、缺角。 ② 板缝间隙均匀，收口、密封胶施工完整，密封连续无断缝、无气泡。 ③ 板材固定点齐全，固定牢固，无松动晃动现象。</li></ol>
+<h4 class="num">2.8.3 验收结果判定规则</h4>
+<ol start="1"><li>所有检查项均满足验收标准 → 验收合格，可移交下一工序。</li><li>如有偏差、缺陷：标记问题位置，整改完成后重新检查；复检合格才算验收通过。</li><li>验收做好记录，留存验收检查资料。</li></ol>
+<h2 id="sec-14">三、常见施工问题与快速整改方案</h2>
+<div class="qa"><p class="qa-item">1. 钢柱偏差 → 检查、调整、复测</p><p class="qa-item">2. 钢梁水平/标高偏差 → 调整、复测</p><p class="qa-item">3. AAC板安装错位 → 检查排版、调整</p><p class="qa-item">4. 板缝过大/不均匀 → 重新调整、处理</p><p class="qa-item">5. 固定不牢 → 检查固定点并重新固定</p><p class="qa-item">6. 构件编号错误/找料错误 → 停止安装、重新核对</p><p class="qa-item">7. 构件或板材破损 → 隔离、标识、按要求处理</p></div>
+  <footer class="tip">— 手册结束 —</footer>
+</div>
+
+<a id="toTop" href="#top" title="返回顶部" aria-label="返回顶部">
+  <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true">
+    <path d="M12 5l7 7h-4v7h-6v-7H5z" fill="currentColor"/>
+  </svg>
+</a>
+
+<script>
+
+/* ========== 一、目录增强（可选：收起面板 + 平滑定位 + 当前章节高亮）
+   说明：展开/收起与跳转本身由原生 <details> 和锚点实现，
+   即使本段脚本被过滤或禁用，目录功能依然完整可用。 ========== */
+(function(){
+  var toc   = document.getElementById('toc');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc-body a'));
+  if (!toc || !links.length) return;
+
+  var heads = links.map(function(a){
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+
+  /* 点击目录 → 收起面板后平滑定位 */
+  links.forEach(function(a, i){
+    a.addEventListener('click', function(e){
+      var h = heads[i];
+      if (!h) return;
+      e.preventDefault();
+      toc.open = false;
+      requestAnimationFrame(function(){
+        h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  });
+
+  /* 目录展开时高亮当前所在章节 */
+  function spy(){
+    var cur = null;
+    heads.forEach(function(h){
+      if (h && h.getBoundingClientRect().top <= 100) cur = h;
+    });
+    links.forEach(function(a, i){
+      a.classList.toggle('on', heads[i] === cur);
+    });
+  }
+  window.addEventListener('scroll', function(){
+    if (toc.open) spy();
+  }, { passive: true });
+  spy();
+})();
+
+/* ========== 二、返回顶部按钮（显隐增强；无 JS 时常显可点） ========== */
+(function(){
+  var btn = document.getElementById('toTop');
+  if (!btn) return;
+  var SHOW_AFTER = 400;   /* 滚动多少距离后出现 */
+
+  function update(){
+    var show = window.pageYOffset > SHOW_AFTER;
+    btn.classList.toggle('show', show);
+    btn.classList.toggle('hide', !show);
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(function(){ update(); ticking = false; });
+    }
+  }, { passive: true });
+  update();
+})();
+
+/* ========== 三、图片点击放大 ========== */
+(function(){
+  var imgs=document.querySelectorAll('img[data-zoom]');
+  var box=document.createElement('div');
+  box.id='zoom';
+  box.innerHTML='<div class="hint">再次点击图片可关闭</div>';
+  box.addEventListener('click',function(){box.classList.remove('on');document.body.style.overflow='';});
+  document.body.appendChild(box);
+  imgs.forEach(function(im){
+    im.addEventListener('click',function(){
+      var big=document.createElement('img');
+      big.src=im.src;
+      box.innerHTML='';
+      box.appendChild(big);
+      var h=document.createElement('div');
+      h.className='hint';h.textContent='再次点击图片可关闭';
+      box.appendChild(h);
+      box.classList.add('on');
+      document.body.style.overflow='hidden';
+    });
+  });
+})();
+
+</script>
 </body>
 </html>
-<!-- （注：内容由AI生成） -->

@@ -359,7 +359,12 @@ figure.pic figcaption{
   padding:0;
 }
 #zoom.on{display:flex;align-items:center;justify-content:center;}
-#zoom img{max-width:none;width:auto;height:auto;max-height:none;display:block;margin:auto;}
+/* ★ 默认：等比缩放，完整适配屏幕（不裁切、不拉伸） */
+#zoom img{width:auto;height:auto;max-width:96vw;max-height:88vh;display:block;margin:auto;border-radius:8px;cursor:zoom-in;}
+/* ★ 点一下后：切换为 1:1 原始像素（可滚动查看细节），图片从左上角开始，避免居中溢出滚不到边 */
+#zoom img.actual{max-width:none;max-height:none;cursor:zoom-out;}
+/* ★ 1:1 时的容器对齐方式 */
+#zoom.on.tight{align-items:flex-start;justify-content:flex-start;}
 #zoom .hint{
   position:fixed;left:0;right:0;bottom:16px;text-align:center;
   color:rgba(255,255,255,.75);font-size:13px;pointer-events:none;
@@ -579,16 +584,26 @@ footer.tip{text-align:center;color:#9aa4b2;font-size:12.5px;margin-top:34px;}
   var box=document.createElement('div');
   box.id='zoom';
   box.innerHTML='<div class="hint">再次点击图片可关闭</div>';
-  box.addEventListener('click',function(){box.classList.remove('on');document.body.style.overflow='';});
+  box.addEventListener('click',function(){
+    box.classList.remove('on','tight');
+    document.body.style.overflow='';
+  });
   document.body.appendChild(box);
   imgs.forEach(function(im){
     im.addEventListener('click',function(){
       var big=document.createElement('img');
       big.src=im.src;
+      /* ★ 点图片：在「适配屏幕」与「1:1 原图」之间切换（阻止冒泡，避免误关闭） */
+      big.addEventListener('click',function(e){
+        if(e.target!==big) return;
+        e.stopPropagation();
+        var act=big.classList.toggle('actual');
+        box.classList.toggle('tight',act);
+      });
       box.innerHTML='';
       box.appendChild(big);
       var h=document.createElement('div');
-      h.className='hint';h.textContent='再次点击图片可关闭';
+      h.className='hint';h.textContent='点击图片查看原图 · 再次点击图片可关闭';
       box.appendChild(h);
       box.classList.add('on');
       document.body.style.overflow='hidden';

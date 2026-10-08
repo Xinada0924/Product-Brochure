@@ -172,6 +172,13 @@ h1{
 .doc-sub{
   text-align:center;color:#8b95a3;font-size:13px;margin:0;
 }
+/* ---------- 公司 Logo ---------- */
+.doc-head .logo{
+  display:block;
+  height:40px;          /* 关键：用 height 控制，宽度自动等比 */
+  width:auto;
+  margin:0 auto 14px;   /* 居中，与标题拉开 14px */
+}
 
 /* ---------- 目录（原生 details，无需 JS 即可展开/收起） ---------- */
 .toc{
@@ -393,9 +400,10 @@ footer.tip{text-align:center;color:#9aa4b2;font-size:12.5px;margin-top:34px;}
 <span id="top"></span>
 <div class="wrap">
   <div class="doc-head">
-    <h1>宝鹏装配式体系3.0产品安装手册</h1>
-    <p class="doc-sub">现场安装指导手册 · 版本一</p>
-  </div>
+  <img class="logo" src="logo.png" alt="公司 Logo">
+  <h1>宝鹏装配式体系3.0产品安装手册</h1>
+  <p class="doc-sub">现场安装指导手册 · 版本一</p>
+</div>
 
   <details class="toc" id="toc">
     <summary class="toc-toggle">
